@@ -1,6 +1,16 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for ( let i = 0; i < array.length; i++ ){
+    let secondNum = target - array[i]
+    for ( let j =i+1; j < array.length; j++ ){
+      if ( array[j] ===secondNum) return true
+    }
+  }
+  return false;
 }
+
+console.log(hasTargetSum([22, 19, 4, 6, 30],25))
+
 
 /* 
   Write the Big O time complexity of your function here
